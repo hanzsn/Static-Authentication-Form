@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <title>Sign up</title>
+  </head>
+  <body
+    class="flex items-center justify-center min-h-screen bg-gradient-to-b from-black via-blue-400 to-red-300"
+  >
+    <div
+      class="flex w-[700px] border-black border-2 rounded-xl overflow-hidden shadow-lg drop-shadow-[10px_10px_20px_black]"
+    >
+      <div class="w-1/2">
+        <img
+          src="../img/coup.jpg"
+          alt="Content"
+          class="w-full h-full object-fill"
+        />
+      </div>
+      <form action="#" method="POST" class="w-1/2 text-center p-6 bg-white">
+        <div>
+          <h1 class="text-3xl font-bold mb-4">Sign up</h1>
+          <div class="flex flex-col items-start mb-4">
+            <label for="newUser" class="font-bold mb-1">Username</label>
+            <input
+              type="user"
+              name="user"
+              id="newUser"
+              placeholder="username"
+              autocomplete="off"
+              required
+              class="w-full px-2 py-1 rounded bg-gray-200"
+            />
+          </div>
+
+          <div class="flex flex-col items-start mb-4">
+            <label for="newEmail" class="font-bold mb-1">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="newEmail"
+              placeholder="email"
+              required
+              class="w-full px-2 py-1 rounded bg-gray-200"
+            />
+          </div>
+
+          <div class="flex flex-col items-start mb-4">
+            <label for="newPass" class="font-bold mb-1">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="newPass"
+              placeholder="password"
+              autocomplete="off"
+              required
+              pattern="^(?=.*[A-Z])(?=.*\d).{12,}$"
+              maxlength="12"
+              title="Password must contain at least 1 uppercase letter and 1 number, max 12 characters"
+              class="w-full px-2 py-1 rounded mb-1 bg-gray-200"
+            />
+            <label for="confirmPass" class="font-bold mb-1"></label>
+            <input
+              type="password"
+              name="password"
+              id="confirmPass"
+              placeholder="confirm password"
+              autocomplete="off"
+              required
+              class="w-full px-2 py-1 rounded mb-6 bg-gray-200"
+            />
+          </div>
+          <div class="flex gap-2 mb-3">
+            <input
+              type="checkbox"
+              name="termsAndCondition"
+              id="legal"
+              required
+              class="cursor-pointer"
+            />
+            <p>I agree to the</p>
+            <a href="legal.html" class="text-blue-800 hover:text-blue-500"
+              >Terms & Privacy Policy</a
+            >
+          </div>
+          <button
+            class="bg-black text-white mb-2 font-bold w-full py-2 rounded cursor-pointer hover:bg-gray-800"
+          >
+            SIGN UP
+          </button>
+          <div class="flex justify-center gap-2">
+            <p>Already have an account?</p>
+            <a href="login.html" class="mb-20 text-blue-800 hover:text-blue-500"
+              >Login</a
+            >
+          </div>
+        </div>
+      </form>
+    </div>
+    <style>
+      input:valid {
+        border: 2px solid green;
+      }
+      input:invalid:not(:placeholder-shown) {
+        border: 2px solid red;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <title>Login</title>
+    <style></style>
+  </head>
+  <body
+    class="flex items-center justify-center min-h-screen bg-gradient-to-b from-black via-blue-400 to-red-300"
+  >
+    <div
+      class="flex w-[700px] border-black border-2 rounded-xl overflow-hidden shadow-lg drop-shadow-[10px_10px_20px_black]"
+    >
+      <div class="w-1/2">
+        <img src="../img/coup.jpg" alt="Content" class="h-full object-fill" />
+      </div>
+      <div class="w-1/2 p-6 bg-white text-center">
+        <form action="#" method="post">
+          <h1 class="text-3xl font-bold mb-4">Login</h1>
+          <div class="flex flex-col items-start mb-4">
+            <label for="logUserEmail" class="font-bold mb-1"
+              >Username/Email</label
+            >
+            <input
+              type="text"
+              name="identifier"
+              id="logUserEmail"
+              placeholder="username or email"
+              required
+              class="w-full px-2 py-1 rounded bg-gray-200"
+            />
+          </div>
+
+          <div class="flex flex-col items-start">
+            <label for="logPass" class="font-bold mb-1">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="logPass"
+              placeholder="password"
+              autocomplete="off"
+              required
+              class="w-full px-2 py-1 rounded mb-1 bg-gray-200"
+            />
+            <div class="flex gap-2 mb-4">
+              <input
+                type="checkbox"
+                id="rememberMe"
+                name="remember me"
+                class="cursor-pointer"
+              />
+              <p class="pr-10">Remember me</p>
+              <a href="#" class="text-blue-800 hover:text-blue-500"
+                >Forgot Password?</a
+              >
+            </div>
+          </div>
+          <button
+            class="bg-black text-white font-bold w-full py-2 rounded cursor-pointer hover:bg-gray-800"
+          >
+            LOGIN
+          </button>
+          <div class="mb-4"></div>
+          <div class="text-center transform translate-y-8">
+            <p class="mb-2">--------------------- or ---------------------</p>
+
+            <div class="justify-center gap-2 mb-20">
+              <div class="flex text-center">
+                <button
+                  id="emailBtn"
+                  class="flex justify-center gap-2 text-black font-bold rounded cursor-pointer bg-gray-200 py-2 px-15 mb-2 whitespace-nowrap hover:bg-gray-300"
+                >
+                  <img src="../img/google.png" alt="" class="h-6" />
+                  <span class="text-center relative">Log in with Google</span>
+                </button>
+              </div>
+              <div class="flex text-center">
+                <button
+                  id="fbBtn"
+                  class="flex justify-center gap-2 font-bold rounded cursor-pointer bg-black text-white py-2 px-12.5 whitespace-nowrap hover:bg-gray-800"
+                >
+                  <img src="../img/facebook.png" alt="" class="h-7" />
+                  <span class="text-center">Log in with Facebook</span>
+                </button>
+              </div>
+              <div class="flex justify-center gap-2">
+                <p>No Account?</p>
+                <a
+                  href="signup.html"
+                  class="text-blue-800 hover:text-blue-500 mb-4"
+                  >Signup now</a
+                >
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <style>
+      input:valid {
+        border: 2px solid green;
+      }
+      input:invalid:not(:placeholder-shown) {
+        border: 2px solid red;
+      }
+    </style>
+  </body>
+</html>
