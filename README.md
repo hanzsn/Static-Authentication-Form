@@ -1,2 +1,2 @@
 # Static-Authentication-Form
-simple static authentication form
+a simple static authentication form built using html, css, and tailwind css
